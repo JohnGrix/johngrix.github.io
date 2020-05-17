@@ -1,0 +1,277 @@
+/* CSS Variables */
+
+:root {
+    --section-bg-color: #333;
+    --bg-color: rgba(43, 43, 43, 0.7);
+    --button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 60%;
+    --remaining-width: 40%;
+    --speed: 1000ms;
+    --yellow: #ffc600
+}
+
+/* General */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    color: white;
+    overscroll-behavior: none;
+    background: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    position: absolute;
+    white-space: nowrap;
+}
+
+img {
+    width: 100%;
+}
+
+/* Navigation */
+
+header {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr auto;
+    grid-auto-flow: column;
+    width: 100vw;
+    border-bottom: 5px solid var(--yellow);
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    position: relative;
+    width: 50px;
+    padding: 10px 10px 10px 10px;
+}
+
+.logo #name {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Menu */
+
+.menu {
+    display: grid;
+    margin: auto 20px auto 0;
+}
+
+.menu ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, auto);
+    list-style: none;
+    text-emphasis: none;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+}
+
+.nav-button {
+    display: block;
+    border: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+.nav-button::after {
+    background: var(--yellow);
+    display: block;
+    content: '';
+    position: relative;
+    left: 3px;
+    height: 2px;
+    width: calc(100% - 6px);
+    transform: translateX(-150%);
+    transition: 0.2s;
+}
+
+.nav-button:hover::after {
+    transform: translateY(0%);
+}
+
+/* Content */
+
+.content {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 50vw;
+    height: 86vh;
+    overflow: hidden;
+}
+
+.split-left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.split-left img {
+    object-fit: cover;
+    object-position: center right;
+}
+
+.split-right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.split-right img {
+    object-fit: cover;
+    object-position: center left;
+}
+
+.split-left::before, .split-right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+}
+
+/* Section title and Read more  */
+
+.split-left h1, .split-right h1 {
+    top: 20%;
+}
+
+.button {
+    display: block;
+    position: absolute;
+    height: 2.5rem;
+    padding-top: 0.9rem;
+    width: 15rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.split-left .button, .split-right .button {
+    top: 35%;
+}
+
+/* Hover */
+
+.split-left, .split-right, .button:hover {
+    background: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+}
+
+.split-left, .split-right, .split-left::before, .split-right::before {
+    transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .split-left {
+    width: var(--hover-width);
+}
+
+.hover-left .split-right {
+    width: var(--remaining-width);
+}
+
+.hover-left .split-right::before {
+    z-index: 2;
+}
+
+.hover-right .split-right {
+    width: var(--hover-width);
+}
+
+.hover-right .split-left {
+    width: var(--remaining-width);
+}
+
+.hover-right .split-left::before {
+    z-index: 2;
+}
+
+/* Footer */
+
+footer {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 32px;
+    width: 100%;
+    border-top: 5px solid var(--yellow);
+    padding: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 3;
+    background: black;
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+    text-emphasis: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .social-icon {
+    margin-left: 20px;
+}
+
+footer .social-icon a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    font-size: 0.7rem;
+    margin: 0 0 0 20px;
+}
+
+/* Media Queries */
+
+@media (max-height: 700px) {
+    .split-left h1 {
+        top: 10%;
+    }
+    .split-right h1 {
+        top: 10%;
+    }
+    .split-left .button {
+        top: 30%;
+    }
+    .split-right .button {
+        top: 30%;
+    }
+}
