@@ -1,216 +1,113 @@
 /* standard.css */
 
-#logobox .inside {
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 20px;
-    padding-bottom: 20px
+/*  ====================================
+    CSS VARIABLES
+    ==================================== 
+*/
+
+:root {
+    --white-color: #fff;
+    --body-font-color: #424242;
+    --body-font: .875em/1.3em Ubuntu;
+    --h1-font-color: #3a454d;
+    --h1-font: 1.8em/1.2em Ubuntu;
+    --h2-font-color: #2d93ce;
+    --h2-font: 1.4em/1.2em Ubuntu;
+    --h3-font-color: #7a7a7a;
+    --h3-font-size: 100%;
+    --h3-font-weight: bold;
+    --h4-font-color: #325f73;
+    --h4-font-size: 115%;
+    --h6-font-size: .875em;
+    --a-hover-color: #26a2eb;
+    --navbar-bg-color: #3a454d;
+    --navbar-font: 1.250em/1.3em Ubuntu;
+    --navbar-font-weight: 300;
+    --submenu-bg-color: #2d94cf;
+    --submenu-item-bg-color: #738a99;
+    --content-bg-color: rgba(255, 255, 255, .8);
+    --article-border-color: #2e92d0;
+    --article-bg-color: #e3e3e3;
+    --footer-bg-color: rgba(102,119,130,.8);
 }
 
-#main .more {
-    margin-right: 10px
+/*  ====================================
+    OVERALL
+    ==================================== 
+*/
+
+html {
+    overflow-y: scroll;
 }
 
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-image: url("../img/body-bg.jpg");
     background-repeat: no-repeat;
-    color: #424242;
-    font: .875em/1.3em Ubuntu;
-    background-attachment: fixed
-}
-
-html {
-    overflow-y: scroll
-}
-
-header img {
-    display: block
-}
-
-header .inside {
-    padding-top: 30px;
-    padding-bottom: 30px
+    background-attachment: fixed;
+    color: var(--body-font-color);
+    font: var(--body-font);
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 p {
     margin: 0 0 12px;
-    padding: 0
+    padding: 0;
 }
 
 h1 {
     margin: 0 0 1.4em;
-    color: #3a454d;
-    font: 1.8em/1.2em Ubuntu
+    color: var(--h1-font-color);
+    font: var(--h1-font);
 }
 
 h2 {
     margin: 0 0 .5em;
     padding: 0;
-    color: #2d93ce;
-    font: 1.4em/1.2em Ubuntu
+    color: var(--h2-font-color);
+    font: var(--h2-font);
 }
 
 h3 {
     display: block;
-    margin: 10px 0 2px;
     padding: 0;
-    font-size: 100%;
-    font-weight: bold;
-    color: #7a7a7a
+    font-size: var(--h3-font-size);
+    color: var(--h3-font-color);
+    font-weight: var(--h3-font-weight);
 }
 
 h4 {
     margin: 0;
     padding: 0;
-    font-size: 115%;
-    color: #325f73
+    font-size: var(--h4-font-size);
+    color: var(--h4-font-color);
 }
 
-a:link, a:visited {
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--h6-font-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
     text-decoration: underline;
-    color: #424242
+    color: var(--a-visited-color);
 }
 
 a:hover {
     text-decoration: none;
-    color: #26a2eb
+    color: var(--a-hover-color);
 }
 
-#wrapper {
-    margin-bottom: 200px
-}
-
-#container {
-    margin-top: 0;
-    background-color: rgba(255, 255, 255, .8)
-}
-
-#header .titel a:link, #header .titel a:visited {
-    text-decoration: none;
-    color: #0b6396
-}
-
-#header .titel a:hover {
-    color: #0091ff
-}
-
-#main .inside {
-    padding: 30px 40px;
-    font-size: 1.063em;
-    line-height: 1.438em
-}
-
-#main .ce_text li {
-    position: relative;
-    margin-bottom: 2px;
-    padding-left: 25px
-}
-
-#main .ce_text ol li {
-    margin-bottom: 10px;
-    margin-left: 25px;
-    padding-left: 5px;
-    list-style-type: decimal
-}
-
-#main .ce_text ul li::before {
-    left: 0;
-    top: 4px;
-    position: absolute;
-    padding-left: 2px;
-    font: .938em FontAwesome;
-    content: "\f1db"
-}
-
-#main .stuff ul li::before {
-    margin-right: 10px;
-    padding-left: 2px;
-    font-family: FontAwesome;
-    color: #2c94ce;
-    content: "\f00c"
-}
-
-#main .stuff li {
-    margin-bottom: 7px;
-    color: #244661
-}
-
-#main .ce_text {
-    margin: 0 0 25px
-}
-
-#main .ce_text ul {
-    overflow: hidden;
-    display: block
-}
-
-#main .ce_gallery img {
-    display: block;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 2px;
-    -webkit-box-shadow: 1px 1px 2px 1px rgba(82, 82, 82, .2);
-    box-shadow: 1px 1px 2px 1px rgba(82, 82, 82, .2);
-    border: 3px solid rgba(255, 255, 255, .5)
-}
-
-.navi img {
-    background-color: #fff;
-    border: 1px solid #c7c7c7;
-    -webkit-box-shadow: 1px 1px 3px 1px rgba(92, 92, 92, .25);
-    box-shadow: 1px 1px 3px 1px rgba(92, 92, 92, .25);
-    transition: border-color 0.5s ease-out
-}
-
-footer {
-    background-color: rgba(102, 119, 130, .8)
-}
-
-footer .inside {
-    margin-right: 25px;
-    margin-left: 25px;
-    padding-top: 10px;
-    padding-bottom: 15px
-}
-
-footer {
-    margin: 0;
-    padding: 10px 0 0;
-    font-size: 95%;
-    color: #fff
-}
-
-footer {
-    float: left
-}
-
-footer a:link, #footer a:visited {
-    color: #fff
-}
-
-
-#main h2 a:link, #main h2 a:visited {
-    font-size: .938em;
-    text-decoration: none;
-    color: #0b6396
-}
-
-#main h2 a:hover {
-    color: #00a6ff
-}
-
-
-
-#logobox .logo {
-    max-width: 205px;
-    margin-right: auto;
-    margin-left: auto
-}
-
-.button a:link, .button a:visited {
+/* .button a:link, .button a:visited {
     display: inline-block;
     margin-top: 5px;
     padding: 3px 7px;
@@ -219,46 +116,207 @@ footer a:link, #footer a:visited {
     font-size: 1.125em;
     text-decoration: none;
     color: #fff
+} */
+
+/*  ====================================
+    HEADER
+    ==================================== 
+*/
+
+header {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--content-bg-color);
 }
 
-a.button:after {
-    content: 'Buchen'
+.header__logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
-.button a:hover{
-    background-color: #3a454d;
-    text-decoration: none
+.logo__img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-h6 {
+/*  ====================================
+    NAVBAR
+    ==================================== 
+*/
+
+nav {
+    display: flex;
+    justify-content: left;
+    background: var(--navbar-bg-color);
+    font: var(--navbar-font);
+    font-weight: var(--navbar-font-weight);
+    text-transform: uppercase;
+}
+
+.menu {
+    list-style: none;
     margin: 0;
     padding: 0;
-    font-size: .875em
 }
 
-a:link.cookiebar__link, a:visited.cookiebar__link {
-    color: #fff
+.menu .menu__item {
+    float: left;
+    transition-duration: 0.5s;
+    color: var(--white-color);
+    padding: 13px 14px;
+    margin: 0;
+    position: relative;
 }
 
-
-
-#main .info {
-    padding: 25px 35px 5px;
-    background-color: rgba(242, 242, 242, .5);
-    border: 3px solid #2d94cf;
-    font-size: 1.125em;
-    font-weight: 300
+.menu .menu__item i {
+    padding-left: 5px;
 }
 
-#main .info h2 {
-    font-size: 1.750em;
-    color: #5f991d;
-    font-weight: 400
+.menu .menu__item a {
+    color: var(--white-color);
 }
 
-#main .info h3 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #303030;
-    font-weight: 400
+.menu .menu__item:hover {
+    background: var(--a-hover-color);
+    cursor: pointer;
+}
+
+.menu .menu__item .submenu {
+    background: var(--submenu-bg-color);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.1s ease;
+    padding: 0;
+    margin-top: 0.8rem;
+    left: 0;
+    display: none;
+    list-style: none;
+}
+
+.menu .menu__item:hover>.submenu, .menu .menu__item .submenu:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.menu .menu__item .submenu .menu__item {
+    display: block;
+    float: none;
+}
+
+.menu .menu__item .submenu .menu__item:hover {
+    background: var(--navbar-bg-color);
+}
+
+/*  ====================================
+    MAIN CONTENT
+    ==================================== 
+*/
+
+.content {
+    margin-top: 0;
+    padding: 30px 30px;
+    background-color: var(--content-bg-color);
+}
+
+.content__welcome {
+    margin-bottom: -30px;
+}
+
+.content__promo-bild {
+    margin-bottom: 30px;
+}
+
+.content__new-level-promo {
+    vertical-align: middle;
+}
+
+.content__mitglied-werden {
+    vertical-align: bottom;
+}
+
+/*  ====================================
+    UNSEREM HAUS
+    ==================================== 
+*/
+
+.article__anlage {
+    border: 2px solid var(--article-border-color);
+    border-radius: 10px;
+    background: var(--article-bg-color);
+    width: 320px;
+    padding: 10px;
+}
+
+.article__anlage .anlage__title {
+    color: var(--h2-font-color);
+    margin-bottom: 10px;
+}
+
+.article__anlage .anlage__address {
+    float: left;
+    text-decoration: none;
+    font-style: normal;
+    padding-left: 5px;
+}
+
+.article__anlage .anlage__address p {
+    font: var(--h2-font);
+    line-height: .825em;
+}
+
+.article__anlage .anlage__bsa-logo {
+    float: right;
+    width: 125px;
+    padding-right: 10px;
+}
+
+.article__anlage .anlage__bsa-outside {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  ====================================
+    DEINE VORTEILE
+    ==================================== 
+*/
+
+/*  ====================================
+    TRAININGSZEITEN
+    ==================================== 
+*/
+
+/*  ====================================
+    KONTAKT
+    ==================================== 
+*/
+
+/*  ====================================
+    FOOTER
+    ==================================== 
+*/
+
+footer {
+    display: block;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    background: var(--footer-bg-color);
+    color: var(--white-color);
+}
+
+.footer__link a {
+    text-decoration: underline;
+    color: var(--white-color);
+}
+
+.footer__link a:hover {
+    text-decoration: none;
 }

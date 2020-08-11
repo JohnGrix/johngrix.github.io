@@ -10,11 +10,10 @@
 
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="./css/normalize.css">
-  <!-- Bootstrap core CSS -->
-  <link href="./css/bootstrap.css" rel="stylesheet">
   <!-- Custom CSS Stylesheet -->
   <link rel="stylesheet" href="./css/standard.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/fonts.css">
 </head>
 
 <body>
@@ -26,28 +25,28 @@
     <nav>
       <!-- navbar -->
       <ul class="menu">
-        <li class="menu__item"><a href="#" class="item__verein">Verein</a> <i class="fa fa-caret-down"></i>
-          <ul class="submenu__verein">
-            <li class="submenu__verein__item"><a href="#">Philosophie</a></li>
-            <li class="submenu__verein__item"><a href="#">Satzung</a></li>
-            <li class="submenu__verein__item"><a href="#">Mitgliedschaft</a></li>
-            <li class="submenu__verein__item"><a href="#">Unserem Anlage</a></li>
-            <li class="submenu__verein__item"><a href="#">Ansprechpartner</a></li>
+        <li class="menu__item"><a href="#" class="item__verein">Verein</a><i class="fa fa-caret-down"></i>
+          <ul class="submenu submenu__verein">
+            <li class="menu__item submenu__verein__item"><a href="#">Philosophie</a></li>
+            <li class="menu__item submenu__verein__item"><a href="#">Satzung</a></li>
+            <li class="menu__item submenu__verein__item"><a href="#">Mitgliedschaft</a></li>
+            <li class="menu__item submenu__verein__item"><a href="#">Unserem Anlage</a></li>
+            <li class="menu__item submenu__verein__item"><a href="#">Ansprechpartner</a></li>
           </ul>
         </li>
-        <li class="menu__item"><a href="#" class="item__sports">Sports</a> <i class="fa fa-caret-down"></i>
-          <ul class="submenu__sports">
-            <li class="submenu__sports__item"><a href="#">Squash</a></li>
-            <li class="submenu__sports__item"><a href="#">Badminton</a></li>
-            <li class="submenu__sports__item"><a href="#">Tischtennis</a></li>
+        <li class="menu__item"><a href="#" class="item__sports">Sports</a><i class="fa fa-caret-down"></i>
+          <ul class="submenu submenu__sports">
+            <li class="menu__item submenu__sports__item"><a href="#">Squash</a></li>
+            <li class="menu__item submenu__sports__item"><a href="#">Badminton</a></li>
+            <li class="menu__item submenu__sports__item"><a href="#">Tischtennis</a></li>
           </ul>
         </li>
-        <li class="menu__item"><a href="#">Training</a> <i class="fa fa-caret-down"></i>
-          <ul class="submenu__training">
-            <li class="submenu__training__item"><a href="#">Schnuppertrainings</a></li>
-            <li class="submenu__training__item"><a href="#">Trainingszeiten</a></li>
-            <li class="submenu__training__item"><a href="#">Clubabende</a></li>
-            <li class="submenu__training__item"><a href="#">Unser Trainers</a></li>
+        <li class="menu__item"><a href="#">Training</a><i class="fa fa-caret-down"></i>
+          <ul class="submenu submenu__training">
+            <li class="menu__item submenu__training__item"><a href="#">Schnuppertrainings</a></li>
+            <li class="menu__item submenu__training__item"><a href="#">Trainingszeiten</a></li>
+            <li class="menu__item submenu__training__item"><a href="#">Clubabende</a></li>
+            <li class="menu__item submenu__training__item"><a href="#">Unser Trainers</a></li>
           </ul>
         </li>
         <li class="menu__item"><a href="#" class="item__bildergalerie">Bildergalerie</a></li>
@@ -55,10 +54,10 @@
         <li class="menu__item"><a href="#" class="item__kontakt">Kontakt</a></li>
       </ul>
 
-      <div class="search">
+      <!-- <div class="search">
         <input type="text" placeholder="SUCHE" class="search__input">
         <img class="search__icon" src="./img/search.png" alt="">
-      </div>
+      </div> -->
 
     </nav> <!-- end navbar -->
 
@@ -67,14 +66,16 @@
   <main class="content">
     <!-- content-->
     <h1 class="content__welcome">Herzlich Wilkommen bei den BallsportATHLETEN e.V. Dresden</h1>
-    <img class="content__new-level-promo" src="./img/Neues Level Bringen Box.png" alt="Promo Bild">
-    <img class="content__mitglied-werden" src="./img/Mitglied werden... Photo.png" alt="Mitglied Werden Bild">
+    <div class="content__promo-bild">
+      <img class="content__new-level-promo" src="./img/Neues Level Bringen Box.png" alt="Promo Bild">
+      <img class="content__mitglied-werden" src="./img/Mitglied werden... Photo.png" alt="Mitglied Werden Bild">
+    </div>
 
     <section class="main-section">
       <!-- main section -->
       <article class="article__anlage">
         <!-- unserem haus article -->
-        <h2 class="anlage__title">Unserem Haus</h2>
+        <h1 class="anlage__title">Unserem Haus</h1>
         <address class="anlage__address">
           <p>BallsportARENA</p>
           <p>Weißeritzstraße 4</p>
@@ -122,20 +123,11 @@
 
   <footer>
     <!-- footer -->
-    <p class="footer__copyright">@ 2020 BallsportATHLETEN e.V. Dresden</p>
-    <ul class>
-      <li class="footer__list__item"><a href="#" class="item__impressum">Impressum</a></li>
-      <li class="footer__list__item"><a href="#" class="item__datenschutz">Datenschutzerklärung</a></li>
-      <li class="footer__list__item"><a href="#" class="item__kontakt">Kontakt</a></li>
-      <li class="footer__list__item"><a href="#" class="item__sitemap">Sitemap</a></li>
-    </ul>
+    <p class="footer__copyright">@ 2020 BallsportATHLETEN e.V. Dresden | <span class="footer__link"><a href="#">Impressum</a></span> | <span class="footer__link"><a href="#">Datenschutzerklärung</a></span> | <span class="footer__link"><a href="#">Kontakt</a></span> | <span class="footer__link"><a href="#">Sitemap</a></span>
+    </p>
   </footer> <!-- end footer -->
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/186caaddc1.js" crossorigin="anonymous"></script>
-  <script src="./js/bootstrap.js"></script>
 </body>
 
 </html>
