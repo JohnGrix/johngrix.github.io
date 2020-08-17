@@ -11,9 +11,13 @@
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="./css/normalize.css">
   <!-- Custom CSS Stylesheet -->
-  <link rel="stylesheet" href="./css/standard.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/globals.css">
   <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/desktop-1024.css">
+  <link rel="stylesheet" href="./css/tablet-768-1024.css">
+  <link rel="stylesheet" href="./css/mobile-480-768.css">
+  <link rel="stylesheet" href="./css/mobile-320-480.css">
+
 </head>
 
 <body>
@@ -23,107 +27,110 @@
     <a href="#" class="header__logo"><img src="./img/BallSportATHLETEN-Logo.png" class="logo__img"
         alt="BallSportATHLETEN e.V. Startseite"></a>
 
-    <nav>
+    <button type="button" class="button header__cta btn__uber-uns"><a href="#">Über uns</a></button>
+    <button type=button class="button header__cta btn__kontakt"><a href="#">Kontakt</a></button>
+
+    <nav class="menu__wrap">
       <!-- navbar -->
-      <ul class="menu">
-        <li class="menu__item"><a href="#" class="item__verein">Verein</a><i class="fa fa-caret-down"></i>
-          <ul class="submenu submenu__verein">
-            <li class="menu__item submenu__verein__item"><a href="#">Philosophie</a></li>
-            <li class="menu__item submenu__verein__item"><a href="#">Satzung</a></li>
-            <li class="menu__item submenu__verein__item"><a href="#">Mitgliedschaft</a></li>
-            <li class="menu__item submenu__verein__item"><a href="#">Unserem Anlage</a></li>
-            <li class="menu__item submenu__verein__item"><a href="#">Ansprechpartner</a></li>
-          </ul>
-        </li>
-        <li class="menu__item"><a href="#" class="item__sports">Sports</a><i class="fa fa-caret-down"></i>
-          <ul class="submenu submenu__sports">
-            <li class="menu__item submenu__sports__item"><a href="#">Squash</a></li>
-            <li class="menu__item submenu__sports__item"><a href="#">Badminton</a></li>
-            <li class="menu__item submenu__sports__item"><a href="#">Tischtennis</a></li>
-          </ul>
-        </li>
-        <li class="menu__item"><a href="#">Training</a><i class="fa fa-caret-down"></i>
-          <ul class="submenu submenu__training">
-            <li class="menu__item submenu__training__item"><a href="#">Schnuppertrainings</a></li>
-            <li class="menu__item submenu__training__item"><a href="#">Trainingszeiten</a></li>
-            <li class="menu__item submenu__training__item"><a href="#">Clubabende</a></li>
-            <li class="menu__item submenu__training__item"><a href="#">Unser Trainers</a></li>
-          </ul>
-        </li>
-        <li class="menu__item"><a href="#" class="item__bildergalerie">Bildergalerie</a></li>
-        <li class="menu__item"><a href="#" class="item__links">Links</a></li>
-        <li class="menu__item"><a href="#" class="item__kontakt">Kontakt</a></li>
-      </ul>
-
-      <!-- <div class="search">
-        <input type="text" placeholder="SUCHE" class="search__input">
-        <img class="search__icon" src="./img/search.png" alt="">
-      </div> -->
-
+      <input type="checkbox" class="toggler" unchecked>
+      <div class="hamburger hamburger--collapse js-hamburger">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+      <section class="menu__container">
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="item__verein">Verein<i class="fa fa-caret-down"></i></a>
+            <ul class="submenu submenu__verein">
+              <li class="menu__item submenu__verein__item"><a href="#">Philosophie</a></li>
+              <li class="menu__item submenu__verein__item"><a href="#">Satzung</a></li>
+              <li class="menu__item submenu__verein__item"><a href="#">Mitgliedschaft</a></li>
+              <li class="menu__item submenu__verein__item"><a href="#">Unserem Anlage</a></li>
+              <li class="menu__item submenu__verein__item"><a href="#">Ansprechpartner</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#" class="item__sports">Sports<i class="fa fa-caret-down"></i></a>
+            <ul class="submenu submenu__sports">
+              <li class="menu__item submenu__sports__item"><a href="#">Squash</a></li>
+              <li class="menu__item submenu__sports__item"><a href="#">Badminton</a></li>
+              <li class="menu__item submenu__sports__item"><a href="#">Tischtennis</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#">Training<i class="fa fa-caret-down"></i></a>
+            <ul class="submenu submenu__training">
+              <li class="menu__item submenu__training__item"><a href="#">Schnuppertrainings</a></li>
+              <li class="menu__item submenu__training__item"><a href="#">Trainingszeiten</a></li>
+              <li class="menu__item submenu__training__item"><a href="#">Clubabende</a></li>
+              <li class="menu__item submenu__training__item"><a href="#">Unser Trainers</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#" class="item__bildergalerie">Bildergalerie</a></li>
+          <li class="menu__item"><a href="#" class="item__links">Links</a></li>
+          <li class="menu__item"><a href="#" class="item__kontakt">Kontakt</a></li>
+        </ul>
+      </section>
     </nav> <!-- end navbar -->
 
   </header> <!-- end header -->
 
+  <!-- <div class="search">
+        <input type="text" placeholder="SUCHE" class="search__input">
+        <img class="search__icon" src="./img/search.png" alt="">
+      </div> -->
+
   <main class="content">
     <!-- content-->
     <h1 class="content__welcome">Herzlich Wilkommen bei den BallsportATHLETEN e.V. Dresden</h1>
-    <div class="content__promo-bild">
-      <img class="content__new-level-promo" src="./img/Neues Level Bringen Box.png" alt="Promo Bild">
-      <img class="content__mitglied-werden" src="./img/Mitglied werden... Photo.png" alt="Mitglied Werden Bild">
-    </div>
+    <div class="content__promo-bild"></div>
 
-    <section class="wrapper">
+    <section class="main-section">
+      <!-- main section -->
+      <article class="article__anlage">
+        <!-- unserem haus article -->
+        <h1 class="anlage__title">Unserem Haus</h1>
+        <div class="anlage__wrapper">
+          <address class="anlage__address">
+            <p>BallsportARENA Dresden</p>
+            <p>Weißeritzstraße 4</p>
+            <p>01067 Dresden</p>
+          </address>
+          <img class="anlage__bsa-logo" src="./img/logo-ballsportarena-dresden-5b39b850.png" alt="Logo BallsportARENA">
+          <img class="anlage__bsa-outside" src="./img/BSA Photo.png" alt="BallsportARENA Outside Bild">
+        </div>
+      </article> <!-- end unserem haus article -->
 
-      <section class="main-section">
-        <!-- main section -->
-        <article class="article__anlage">
-          <!-- unserem haus article -->
-          <h1 class="anlage__title">Unserem Haus</h1>
-          <div class="anlage__wrapper">
-            <address class="anlage__address">
-              <p>BallsportARENA Dresden</p>
-              <p>Weißeritzstraße 4</p>
-              <p>01067 Dresden</p>
-            </address>
-            <img class="anlage__bsa-logo" src="./img/logo-ballsportarena-dresden-5b39b850.png"
-              alt="Logo BallsportARENA">
-            <img class="anlage__bsa-outside" src="./img/BSA Photo.png" alt="BallsportARENA Outside Bild">
-          </div>
-        </article> <!-- end unserem haus article -->
-
-        <article class="article__vorteile">
-          <!-- deine vorteile article -->
-          <h1 class="vorteile__title">Deine Vorteile</h1>
-          <img class="vorteile__circles" src="./img/Deine_Vorteile.png"
-            alt="Deine Vorteile als Mitglieder bei den BallSportATHLETEN Verein">
-        </article> <!-- end deine vorteile article -->
-      </section> <!-- end main section-->
+      <article class="article__vorteile">
+        <!-- deine vorteile article -->
+        <h1 class="vorteile__title">Deine Vorteile</h1>
+        <img class="vorteile__circles" src="./img/Deine_Vorteile.png"
+          alt="Deine Vorteile als Mitglieder bei den BallSportATHLETEN Verein">
+      </article> <!-- end deine vorteile article -->
+    </section> <!-- end main section-->
 
 
-      <section class="side-section">
-        <!-- Right side section -->
-        <article class="article__trainingszeiten">
-          <!-- Trainingszeiten article -->
-          <h2 class="trainingszeiten__title">Trainingszeiten</h2>
-          <ul class="trainingszeiten__list">
-            <li class="trainingszeiten__list__item"><a href="#" class="item__starter-jugendlichen">Starter/Jugendlichen
-              </a></li>
-            <li class="trainingszeiten__list__item"><a href="#" class="item__studenten">Studenten
-              </a></li>
-            <li class="trainingszeiten__list__item"><a href="#" class="item__erwachsenen">
-                Erwachsenen
-              </a></li>
-          </ul>
-        </article> <!-- end Trainingszeiten article -->
+    <section class="side-section">
+      <!-- Right side section -->
+      <article class="article__trainingszeiten">
+        <!-- Trainingszeiten article -->
+        <h2 class="trainingszeiten__title">Trainingszeiten</h2>
+        <ul class="trainingszeiten__list">
+          <li class="trainingszeiten__list__item"><a href="#" class="item__starter-jugendlichen">Starter/Jugendlichen
+            </a></li>
+          <li class="trainingszeiten__list__item"><a href="#" class="item__studenten">Studenten
+            </a></li>
+          <li class="trainingszeiten__list__item"><a href="#" class="item__erwachsenen">
+              Erwachsenen
+            </a></li>
+        </ul>
+      </article> <!-- end Trainingszeiten article -->
 
-        <article class="article__kontakt">
-          <!-- Kontakt article -->
-          <h2 class="kontakt__title">Kontakt</h2>
-          <a class="kontakt__email" href="mailto:info@ballsportathleten.de">info@ballsportathleten.de</a>
-          <p class="kontakt__phone">+49 170 584 9992</p>
-        </article> <!-- end Kontakt article -->
-      </section> <!-- end right side section -->
-    </section> <!-- end wrapper section-->
+      <article class="article__kontakt">
+        <!-- Kontakt article -->
+        <h2 class="kontakt__title">Kontakt</h2>
+        <a class="kontakt__email" href="mailto:info@ballsportathleten.de">info@ballsportathleten.de</a>
+        <p class="kontakt__phone">+49 170 584 9992</p>
+      </article> <!-- end Kontakt article -->
+    </section> <!-- end right side section -->
   </main> <!-- end content -->
 
   <footer>

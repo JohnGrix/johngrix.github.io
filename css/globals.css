@@ -1,0 +1,121 @@
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+
+/*  ====================================
+    CSS VARIABLES
+    ==================================== 
+*/
+
+:root {
+    --white-color: #fff;
+    --body-font-color: #424242;
+    --body-font: .875em/1.3em Ubuntu;
+    --h1-font-color: #3a454d;
+    --h1-font: 1.8em/1.2em Ubuntu;
+    --h2-font-color: #2d93ce;
+    --h2-font: 1.4em/1.2em Ubuntu;
+    --h3-font-color: #7a7a7a;
+    --h3-font: 1.250em/1.3em Ubuntu;
+    --h3-font-size: 100%;
+    --h3-font-weight: bold;
+    --h4-font-color: #325f73;
+    --h4-font-size: 115%;
+    --h6-font-size: .875em;
+    --a-hover-color: #26a2eb;
+    --header-cta-bg-color: var(--article-border-color);
+    --navbar-bg-color: #3a454d;
+    --navbar-font: 1.5em/1.3em Ubuntu;
+    --navbar-font-weight: 300;
+    --submenu-bg-color: #2d94cf;
+    --submenu-item-bg-color: #738a99;
+    --content-bg-color: rgba(255, 255, 255, .6);
+    --article-border-color: #2e92d0;
+    --article-bg-color: #e3e3e3;
+    --footer-bg-color: rgba(102, 119, 130, .8);
+}
+
+/*  ====================================
+OVERALL
+==================================== 
+*/
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../img/body-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--body-font-color);
+    font: var(--body-font);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+h1 {
+    margin: 0 0 1.4em;
+    color: var(--h1-font-color);
+    font: var(--h1-font);
+}
+
+h2 {
+    margin: 0 0 .5em;
+    padding: 0;
+    color: var(--h2-font-color);
+    font: var(--h2-font);
+}
+
+h3 {
+    display: block;
+    padding: 0;
+    font-size: var(--h3-font-size);
+    color: var(--h3-font-color);
+    font-weight: var(--h3-font-weight);
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--h4-font-size);
+    color: var(--h4-font-color);
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--h6-font-size);
+}
+
+a {
+    text-decoration: none;
+    color: var(--body-font-color);
+}
+
+.button {
+    border: 0;
+}
+
+.button a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff
+}

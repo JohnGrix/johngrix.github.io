@@ -1,0 +1,39 @@
+@media all and (max-width: 480px) { 
+
+    /*  ====================================
+        (SECTION) MAIN-SECTION
+        ==================================== 
+    */
+
+    .main-section {
+        grid-template-areas: "anlage anlage"
+                             "vorteile vorteile";
+    }
+}
+
+/* @media (min-width: 700px) { */
+
+    /*  ====================================
+        (SECTION) CONTENT 
+        ==================================== 
+    */
+
+    /* h1.content__welcome {
+        text-align: center;
+    }
+
+    div.content__promo-bild {
+        height: 10em;
+        background: url(../img/Neues_Level-Mitglied_Werden-Zusammen-MOBILE.png) no-repeat;
+        background-size: contain;
+        margin-top: 3em;
+    } */
+
+    /*  ====================================
+        (SECTION) BOXES WRAPPER
+        ==================================== 
+    */
+   
+    /* .wrapper {
+        margin-top: -1.5em;
+    } */

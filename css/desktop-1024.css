@@ -1,0 +1,232 @@
+/* standard.css */
+
+@media all and (min-width: 1024px) {
+
+    /*  ====================================
+    HEADER
+    ==================================== 
+*/
+    /* 
+header {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--content-bg-color);
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2em;
+    padding-bottom: 2em;
+}
+
+.logo__img {
+    width: 33%;
+} */
+    /*  ====================================
+    NAVBAR
+    ==================================== 
+*/
+    nav {
+        /* justify-content: left; */
+        font: var(--navbar-font);
+        font-weight: var(--navbar-font-weight);
+        text-transform: uppercase;
+    }
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu:first-child {
+        margin-left: 16px;
+    }
+    .menu .menu__item {
+        float: left;
+        transition-duration: 0.5s;
+        color: var(--white-color);
+        padding: 13px 14px;
+        margin: 0;
+        position: relative;
+    }
+    .menu .menu__item i {
+        padding-left: 5px;
+    }
+    .menu .menu__item a {
+        color: var(--white-color);
+    }
+    .menu .menu__item:hover {
+        background: var(--a-hover-color);
+        cursor: pointer;
+    }
+    .menu .menu__item .submenu {
+        background: var(--submenu-bg-color);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.1s ease;
+        padding: 0;
+        margin-top: 0.8rem;
+        left: 0;
+        display: none;
+        list-style: none;
+    }
+    .menu .menu__item:hover>.submenu, .menu .menu__item .submenu:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    .menu .menu__item .submenu .menu__item {
+        display: block;
+        float: none;
+    }
+    .menu .menu__item .submenu .menu__item:hover {
+        background: var(--navbar-bg-color);
+    }
+    /*  ====================================
+    (SECTION) CONTENT 
+    ==================================== 
+*/
+    .content {
+        margin-top: 0;
+        padding: 30px 30px;
+        background-color: var(--content-bg-color);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 6fr);
+        grid-template-rows: repeat(auto-fit, 5fr);
+        grid-template-areas: "welcome welcome welcome welcome welcome welcome" "promo promo promo promo promo promo" "main main main main main side" "main main main main main side" "main main main main main side";
+    }
+    .content__welcome {
+        grid-area: welcome;
+        margin: 0 0 -20px 0;
+    }
+    .content__promo-bild {
+        grid-area: promo;
+        height: 15em;
+        background: url("../img/Neues_Level-Mitglied_Werden-Zusammen-DESKTOP.png") no-repeat;
+        background-size: contain;
+        margin-top: -2em;
+    }
+    /*  ====================================
+    (ARTICLE) HOMEPAGE BOXES
+    ==================================== 
+*/
+    article {
+        border: 3px solid var(--article-border-color);
+        border-radius: 10px;
+        background: var(--article-bg-color);
+        padding: 10px;
+    }
+    article h1 {
+        color: var(--h2-font-color);
+        margin-bottom: 10px;
+    }
+    /*  ====================================
+    (SECTION) MAIN-SECTION
+    ==================================== 
+*/
+    .main-section {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: minmax(0, 350px) minmax(0, 1fr);
+        grid-template-rows: min-content;
+        grid-template-areas: "anlage vorteile";
+        column-gap: 10px;
+    }
+    /*  ====================================
+    UNSEREM HAUS
+    ==================================== 
+*/
+    .article__anlage {
+        grid-area: anlage;
+        height: min-content;
+    }
+    .article__anlage .anlage__wrapper {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: "address logo" "bsa-outside bsa-outside";
+    }
+    .anlage__wrapper .anlage__address {
+        grid-area: address;
+        text-decoration: none;
+        font-style: normal;
+        align-self: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .anlage__address p {
+        font: var(--h2-font);
+        line-height: .5em;
+    }
+    .anlage__wrapper .anlage__bsa-logo {
+        grid-area: logo;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: flex-end;
+        width: 140%;
+    }
+    .anlage__bsa-outside {
+        grid-area: bsa-outside;
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    /*  ====================================
+    DEINE VORTEILE
+    ==================================== 
+*/
+    .article__vorteile {
+        grid-column: 2/3;
+        grid-area: vorteile;
+    }
+    /*  ====================================
+    (SECTION) SIDE-SECTION
+    ==================================== 
+*/
+    .side-section {
+        grid-area: side;
+        margin-left: 10px;
+    }
+    .side-section p, .side-section a {
+        font: var(--h3-font);
+    }
+    /*  ====================================
+    TRAININGSZEITEN
+    ==================================== 
+*/
+    .article__trainingszeiten {
+        margin-bottom: 1.2em;
+    }
+    .trainingszeiten__title {
+        margin: 0;
+    }
+    .trainingszeiten__list {
+        margin: 0;
+        padding: 10px;
+    }
+    /*  ====================================
+    KONTAKT
+    ==================================== 
+*/
+    /*  ====================================
+    FOOTER
+    ==================================== 
+*/
+    footer {
+        display: block;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        background: var(--footer-bg-color);
+        color: var(--white-color);
+    }
+    .footer__link a {
+        text-decoration: underline;
+        color: var(--white-color);
+    }
+    .footer__link a:hover {
+        text-decoration: none;
+    }
+}
